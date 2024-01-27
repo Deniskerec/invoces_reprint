@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Generator</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Your custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+    </style>
+</head>
+<body>
+    <!-- Side Navbar -->
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <img src="Documents\Hafil- tax invoice\logo\logo" alt="Hafil Logo" width="100">
+        </div>
+        <div class="navbar-options">
+            <button class="navbar-button" onclick="showInvoice()">Invoice</button>
+            <button class="navbar-button" onclick="showTicket()">Ticket</button>
+        </div>
+    </nav>
+
+    <!-- Content Area -->
+    <div class="content">
+        <div class="container mt-5">
+            <!-- Invoice Content -->
+            <div id="invoiceContent">
+                <h1 class="text-center mb-4" style="color: white;">Invoice</h1>
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <form action="/" method="post" class="card card-body">
+                            <div class="form-group">
+                                <label for="ticket_id">Ticket ID:</label>
+                                <input type="text" class="form-control" id="ticket_id" name="ticket_id">
+                            </div>
+                            <div class="form-group">
+                                <label for="document_id">Document ID:</label>
+                                <input type="text" class="form-control" id="document_id" name="document_id">
+                            </div>
+                            <div class="form-group">
+                                <label for="financial_id">Financial ID:</label>
+                                <input type="text" class="form-control" id="financial_id" name="financial_id">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Generate</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ticket Content -->
+            <div id="ticketContent" class="hidden">
+                <h1 class="view-text">Work in Progress</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.10/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- JavaScript to toggle content -->
+    <script>
+        const invoiceContent = document.getElementById("invoiceContent");
+        const ticketContent = document.getElementById("ticketContent");
+
+        // Show the "Invoice" content by default
+        showInvoice();
+
+        function showInvoice() {
+            invoiceContent.classList.remove("hidden");
+            ticketContent.classList.add("hidden");
+        }
+
+        function showTicket() {
+            invoiceContent.classList.add("hidden");
+            ticketContent.classList.remove("hidden");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+body {
+    background-color: #0C1C24;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+.navbar {
+    background-color: #FF6050; /* Red color */
+    color: white;
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: flex-start; /* Align items at the top */
+}
+
+.navbar-logo {
+    text-align: center;
+    margin-top: 20px; /* Adjust margin to position logo higher */
+}
+
+.navbar-options {
+    text-align: center;
+    margin-top: 20px; /* Adjust margin to separate buttons from logo */
+}
+
+.navbar-button {
+    background-color: transparent;
+    border: 2px solid #0C1C34; /* Adjusted blue outline */
+    color: white; /* White text color */
+    font-size: 24px; /* Bigger text size */
+    cursor: pointer;
+    width: 100%; /* Make buttons full width of navbar */
+    margin-bottom: 10px; /* Add spacing between buttons */
+    padding: 10px; /* Add padding to buttons */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.content {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+/* Hide content by default */
+.hidden {
+    display: none;
+}
+
+/* Style for the "Work in Progress" text in the view */
+.view-text {
+    color: white; /* White text color */
+    font-size: 24px; /* Bigger text size */
+    text-align: center;
+    margin-top: 20%; /* Adjusted margin */
+}
+ 
+/* Style for the "Generate" button */
+.btn-primary {
+    background-color: #0C1C34; /* Blue color for the button */
+    border: none; /* Remove button border */
+    border-radius: 5px; /* Rounded corners for the button */
+    font-size: 18px; /* Font size for the button text */
+    color: white; /* White text color for the button */
+}
+
+/* Style for the "Generate" button on hover */
+.btn-primary:hover {
+    background-color: #0A1726; /* Darker shade of blue on hover */
+}
